@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <style>
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url();
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+        nav {
+            background-color: transparent !important;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 300px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .navbar-nav .nav-link {
+            font-size: 30px;
+            color: whitesmoke;
+            text-decoration: none; 
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: white;
+            color: black; 
+        }
+        
+        .form-control {          
+            background-color: transparent;
+            border-radius: 10px;
+            margin-left: 0px;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 20px;
+            font-size: 1.2rem;           
+            width: 100%; 
+            min-height: 80px; 
+            resize: vertical; 
+            color: transparent;
+        }
+        #text_input{
+            color: white;
+            font-size: xx-large;
+        }
+        button {
+            margin-left: 550px;
+            padding: 10px 20px; /* Adjust padding for better aesthetics */
+            font-size: 16px;
+            color: white;
+            background-color: darkred;
+            border: none;
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Change cursor to indicate a clickable button */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+        }
+
+        button:hover {
+            background-color: crimson; /* Lighter red on hover */
+            transform: scale(1.05); /* Slightly enlarge the button */
+            color: white; /* Keep the text white */
+        }
+
+        
+    </style>
+</head>
+<body>
+    <video class="video-background" autoplay muted loop>
+        <source src="static/v1.mp4" type="video/mp4">
+    </video>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav" style="margin-left: 1400px;">
+                    <a  class="nav-link" href="/">Home</a>
+                    <a  class="nav-link" href="/abstract">Abstract</a>
+                    <a class="nav-link " href="/predict">Predict</a>                    
+                    <a class="nav-link" href="/chart">Chart</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h1 style="text-align: center; color: whitesmoke;"> Input Data For Depression or Control Detection</h1>
+        <br><br>
+        <form action='/predict' method='POST'>
+            <div class="container mt-5" style="color: whitesmoke;">
+                <h2>Depression Analysis</h2>
+                <div class="form-control">                    
+                    <textarea style="background-color: transparent;"  class="form-control" id="text_input" name="text_input" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-info mt-3">Prediction</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url();
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        /* Video background */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        /* Transparent Navbar */
+        nav {
+            background-color: transparent !important;  /* Make navbar transparent */
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);  /* Optional shadow for visibility */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 300px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 30px;
+            color: whitesmoke;
+            text-decoration: none; /* Remove underline if present */
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: white;
+            color: black; /* Ensure the text color doesn't change to something unintended */
+        }
+
+
+        /* Center content */
+        .content-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: wheat;
+            width: 100%; /* Adjust width as needed */
+            max-width: 1000px; /* Limit maximum width */
+            padding: 20px;
+            
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            line-height: 1.4;
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Video -->
+    <video class="video-background" autoplay muted loop>
+        <source src="static/v1.mp4" type="video/mp4">
+    </video>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav" style="margin-left: 1400px;"> <!-- Align navbar to the right -->
+                    <a class="nav-link " href="/">Home</a>
+                    <a class="nav-link" href="/abstract">Abstract</a>
+                    <a class="nav-link" href="/login">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <!-- Content Overlay -->
+    <div class="container mt-5">
+        <div class="content-overlay">
+            <h1><b>Explainable Detection of Depression in Social Media Contents Using Natural Language Processing</b></h1>
+        </div>
+    </div>
+
+</body>
+</html>
